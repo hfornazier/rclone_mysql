@@ -20,6 +20,7 @@ Output will be the rclone binary with integrated plugin.
 Initial Configuration
 Create config.txt with your settings:
 
+```ini
 [db_development]
 server = 192.155.1.13
 port = 3306
@@ -54,7 +55,7 @@ smtp_port = 587
 smtp_user = backup@seudominio.com
 smtp_pass = senhasupersecreta
 from = backup@seudominio.com
-to = admin@gmail.com,suporte@seudominio.com
+to = admin@gmail.com, suporte@seudominio.com
 use_tls = true
 
 Encrypt the Configuration
