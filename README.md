@@ -1,20 +1,24 @@
-📦 rclone mysql — Secure and Free MySQL Backup
+rclone mysql — Secure and Free MySQL Backup
 Plugin for rclone that performs MySQL database backups with:
-•	🔐 System-bound encryption
-•	📦 ZIP compression
-•	☁️ Upload to any storage supported by rclone (Drive, PCloud, S3, etc.)
-•	💡 Open source with environment-based security
-•	📅 Easy integration with cron (Linux) or Task Scheduler (Windows)
-🔒 Security: How it works The configuration file (rclone-config.enc) is encrypted with a key derived from the system environment (OS, hostname, user, and path).
-•	✅ This ensures:
+
+• System-bound encryption
+• ZIP compression
+•	Upload to any storage supported by rclone (Drive, PCloud, S3, etc.)
+•	Open source with environment-based security
+•	Easy integration with cron (Linux) or Task Scheduler (Windows)
+
+Security: How it works The configuration file (rclone-config.enc) is encrypted with a key derived from the system environment (OS, hostname, user, and path).
+
+• This ensures:
 o	It can only be used on the same computer where it was generated.
 o	Even with access to the code, the secret resides in the environment — not in the logic.
 o	This technique is known as environmental binding, used in highly secure software.
-⚙️ Compilation
+
+Compilation
 go build -tags=crypt -o rclone
 The output will be the rclone binary with the integrated plugin.
-🧾 Initial Configuration Create a config.txt file with the data:
 
+Initial Configuration Create a config.txt file with the data:
 [db_development]
 server = 192.155.1.13
 port = 3306
